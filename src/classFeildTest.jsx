@@ -13,6 +13,9 @@ export default class Test extends React.Component{
     static getDerivedStateFromProps(){
         console.log('Hi i am in getDerivedStateFromProps')
     }
+    getDerivedStateFromProps(){
+        console.log('I am in getDerivedStateFromProps')
+    }
 
     static componentDidMount(){
         console.log('I am in componentDidMount')
