@@ -13,14 +13,22 @@ export default class Test extends React.Component{
     static getDerivedStateFromProps(){
         console.log('Hi i am in getDerivedStateFromProps')
     }
+
+    static componentDidMount(){
+        console.log('I am in componentDidMount')
+    }
+
+
     handle(){
         this.setState({
             visible:false
         })
     }
     render(){
+        console.log('I am in render')
         return(
-            <div onClick={this.handle.bind(this)}>Hi I am here</div>
+             
+             <div onClick={this.handle.bind(this)}>Hi I am here {console.log('I am in render return last line !!!!')}</div>
         )
     }
 }
