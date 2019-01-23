@@ -8,16 +8,11 @@ export default class Test extends React.Component{
     }
     /**
      * 
-     * Warning: `Test` uses `getDerivedStateFromProps` but its initial state is undefined. This is not recommended. Instead, define the initial state by assigning an object to `this.state` in the constructor of `Test`. This ensures that `getDerivedStateFromProps` arguments have a consistent shape
-     * 
-     */
-    /**
-     * 
-     * Warning: Test.getDerivedStateFromProps(): A valid state object (or null) must be returned. You have returned undefined.
+     * Warning: Test: getDerivedStateFromProps() is defined as an instance method and will be ignored. Instead, declare it as a static method
      * 
      * 
      */
-    static getDerivedStateFromProps(){
+    getDerivedStateFromProps(){
         console.log('Hi i am in getDerivedStateFromProps')
     }
     render(){
