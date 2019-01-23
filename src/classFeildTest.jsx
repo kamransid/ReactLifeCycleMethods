@@ -4,20 +4,23 @@ export default class Test extends React.Component{
     x = 10
     constructor(){
         super()
+        this.state = {
+            visible : true
+        }
         console.log(`This is called with ${this.x}`)
     }
-    /**
-     * 
-     * Warning: Test: getDerivedStateFromProps() is defined as an instance method and will be ignored. Instead, declare it as a static method
-     * 
-     * 
-     */
-    getDerivedStateFromProps(){
+
+    static getDerivedStateFromProps(){
         console.log('Hi i am in getDerivedStateFromProps')
+    }
+    handle(){
+        this.setState({
+            visible:false
+        })
     }
     render(){
         return(
-            <div>Hi I am here</div>
+            <div onClick={this.handle.bind(this)}>Hi I am here</div>
         )
     }
 }
